@@ -58,13 +58,16 @@ Get-Content -Path "./exercicio-1.txt" -Filter "*.txt"
 
 # exercicio 3 ------------------------------------------------------------------------------------------------------
 
-# Get-WinEvent -ProviderName "Microsoft-Windows-KnownFolders" | ForEach { $level = $_.LevelDisplayName; $id = $_.Id; if ($level -eq "Err") { echo $_ }  }
+# FilterHashTable faz um filtro igual (-LogName, -ProviderName ou Where-Object), mas aqui e feito em um estilo (chave: valor), igual umas hashTable mesmo
+	#sendo mais rapida do que Where-Object pelo motivo do filtro ser feito no arquivo de log. e não busca todos os dados e depois faz o filtro
+
+# LogName e o nome do arquivo de log(System, Application ou Security) e ProviderName e o nome do provedor que publicou esse evento
+# Get-WinEvent -FilterHashTable @{ LogName='System'; ProviderName='Microsoft-Windows-Ntfs' }
 
 # 1
 
-# Microsoft-Windows-Kernel-Cache
-# Microsoft-Windows-KnownFolders
+# Microsoft-Windows-Ntfs
 
-# 2 - Saber onde e quando ocorreu a falha, tanto em qual provedor ocorreu essa falha, saber se o porque dessa falha internamente, com campos disponibilizados
+# 2 - Saber onde e quando ocorreu a falha, qual provedor publicou a informação ou falha, saber o porque dessa falha internamente, com campos disponibilizados
 # como id, Message, LevelDisplay, TimeCreated
 
