@@ -40,7 +40,7 @@ $exercicio1 = "
 #
 #
 #
-# 2 - O estado atual do dispositivo, OK = Funcionando, Unknown = Não sabe o estado atual, Disable = Desabilitado
+# 2 - O estado atual do dispositivo, OK = Funcionando, Unknown = O dispotivo esta no porta USB, mas foi retirado, o Sistema esta tentando buscar esse dispositov na porta que ele estava mas retorna Unknown, Disable = Desabilitado
 "
 
 echo $exercicio1 | Out-File -FilePath "./exercicio-1.txt" 
