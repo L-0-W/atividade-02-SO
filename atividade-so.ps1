@@ -6,6 +6,8 @@
 #
 # 1 - OS DOIS
 # DiskDrive | NVMe SM2P41C3 NVMe ADATA 256GB
+	# Porque? Usuario 'entra' com dados no disco, criando arquivos, por mais que seja o computador que crie, isso e uma ação do usuario. saida de dados, como o monitor sai alguma informação para o usuario, o Disco retorna informações de um arquivo ou o arquivo em si.
+
 # Net | WAN Miniport (SSTP)
 #
 # 1- SAIDA
